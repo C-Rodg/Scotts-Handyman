@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import imageMeasure from '../images/placeholder_measure.jpeg'
+import imagePlane from '../images/placeholder_planer.jpeg';
+
 class Main extends Component {
   render() {
     let close = (
@@ -27,7 +30,7 @@ class Main extends Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img src="" alt="" />
+            <img src={imagePlane} alt="Scott's tools for woodworking projects" />
           </span>
           <p>
             Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
@@ -90,7 +93,7 @@ class Main extends Component {
         >
           <h2 className="major">About</h2>
           <span className="image main">
-            <img src="" alt="" />
+            <img src={imageMeasure} alt="Scott measuring a new project" />
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
