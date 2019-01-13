@@ -173,6 +173,16 @@ class Main extends Component {
                 <span className="label">Instagram</span>
               </a>
             </li>
+            <li>
+              <a
+                href="https://yelp.com"
+                className="icon fa-yelp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="label">Yelp</span>
+              </a>
+            </li>
           </ul>
           {close}
         </article>
