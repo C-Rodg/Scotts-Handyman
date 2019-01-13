@@ -114,12 +114,20 @@ class Main extends Component {
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <label htmlFor="first-name">First Name</label>
+              <input type="text" name="first-name" id="first-name" />
             </div>
             <div className="field half">
+              <label htmlFor="last-name">Last Name</label>
+              <input type="text" name="last-name" id="last-name" />
+            </div>
+            <div className="field half first">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="email" name="email" id="email" />
+            </div>
+            <div className="field half">
+              <label htmlFor="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
@@ -136,23 +144,33 @@ class Main extends Component {
           </form>
           <ul className="icons">
             <li>
-              <a href="#" className="icon fa-twitter">
-                <span className="label">Twitter</span>
+              <a
+                href="mailto:test@gmail.com"
+                className="icon fa-envelope"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="label">Mail</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon fa-facebook">
+              <a
+                href="https://facebook.com"
+                className="icon fa-facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="label">Facebook</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon fa-instagram">
+              <a
+                href="https://instagram.com"
+                className="icon fa-instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="icon fa-github">
-                <span className="label">GitHub</span>
               </a>
             </li>
           </ul>

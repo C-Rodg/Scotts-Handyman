@@ -40,7 +40,6 @@ class IndexPage extends Component {
   }
 
   handleOpenArticle(article) {
-    console.log(article)
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article,
