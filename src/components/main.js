@@ -1,8 +1,25 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+// Placeholder images
 import imageMeasure from '../images/placeholder_measure.jpeg'
 import imagePlane from '../images/placeholder_planer.jpeg';
+
+// Work images
+import workBedframe from '../images/work/work_bedframe.jpg'
+import workCabinets from '../images/work/work_cabinets.jpg'
+import workChest from '../images/work/work_chest.jpg'
+import workCoffeeTable from '../images/work/work_coffeetable.jpg'
+import workDeck1 from '../images/work/work_deck1.jpg'
+import workDeck2 from '../images/work/work_deck2.jpg'
+import workDeck3 from '../images/work/work_deck3.jpg'
+import workFence1 from '../images/work/work_fence1.jpg'
+import workFence2 from '../images/work/work_fence2.jpg'
+import workGate from '../images/work/work_gate.jpg'
+import workRailing from '../images/work/work_railing.jpg'
+import workStable1 from '../images/work/work_stable1.jpg'
+import workStable2 from '../images/work/work_stable2.jpg'
+import workVanity from '../images/work/work_vanity.jpg'
 
 class Main extends Component {
   render() {
@@ -33,14 +50,14 @@ class Main extends Component {
             <img src={imagePlane} alt="Scott's tools for woodworking projects" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
+            **TODO** - Basic Intro, Services offered -Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
             aliquam facilisis ante interdum congue. Integer mollis, nisl amet
             convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
             magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
             By the way, check out my <a href="#work">awesome work</a>.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+          **TODO** - Intro continued - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
             dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
             torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
             libero eu nibh porttitor fermentum. Nullam venenatis erat id
@@ -63,24 +80,68 @@ class Main extends Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Work</h2>
-          <span className="image main">
-            <img src="" alt="" />
-          </span>
+          
           <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
+            **TODO - INTRO SUMMARY OF WORK**Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
+            at eleifend sapien imperdiet ac. 
           </p>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
+          <figure className="image main">
+            <img src={workBedframe} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workCabinets} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workChest} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workCoffeeTable} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workDeck1} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workDeck2} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workDeck3} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workFence1} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workFence2} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workGate} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workRailing} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workStable1} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workStable2} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workVanity} alt="" />
+            <figcaption>**TODO**Information about project</figcaption>
+          </figure>
+          
           {close}
         </article>
 
@@ -96,7 +157,7 @@ class Main extends Component {
             <img src={imageMeasure} alt="Scott measuring a new project" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
+          **TODO** - About your experience, etc. - Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
             eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
             erat volutpat. Praesent urna nisi, fringila lorem et vehicula
             lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.

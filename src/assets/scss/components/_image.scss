@@ -25,6 +25,12 @@
     display: block;
   }
 
+  figcaption {
+    padding: 3px 0;
+    font-style: italic;
+    text-align: center;
+  }
+
   &.left,
   &.right {
     max-width: 40%;
