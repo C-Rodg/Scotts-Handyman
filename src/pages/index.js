@@ -14,7 +14,7 @@ class IndexPage extends Component {
       articleTimeout: false,
       article: '',
       loading: 'is-loading',
-      currentTitle: 'Hey',
+      currentTitle: TitleMapping['/'],
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
