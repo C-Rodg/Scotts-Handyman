@@ -12,7 +12,7 @@ const Footer = props => (
       >
         Curtis Rodgers
       </a>
-      . Contractor ID: 123456789
+      . Contractor ID: SCOTTCS814BJ
     </p>
   </footer>
 )
