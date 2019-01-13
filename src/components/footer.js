@@ -4,7 +4,10 @@ import PropTypes from 'prop-types'
 const Footer = props => (
   <footer id="footer" style={props.timeout ? { display: 'none' } : {}}>
     <p className="copyright">
-      &copy; Design:{' '}
+      Contractor ID: SCOTTCS814BJ
+    </p>
+    <p className="copyright">
+      Design:{' '}
       <a
         href="https://curtisrodgers.com"
         target="_blank"
@@ -12,7 +15,6 @@ const Footer = props => (
       >
         Curtis Rodgers
       </a>
-      . Contractor ID: SCOTTCS814BJ
     </p>
   </footer>
 )
