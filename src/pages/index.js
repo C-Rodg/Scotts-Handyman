@@ -121,7 +121,7 @@ const TitleMapping = {
   '/': 'Home',
   intro: 'Intro',
   about: 'About',
-  work: 'Work',
+  projects: 'Projects',
   contact: 'Contact',
 }
 

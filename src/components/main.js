@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 // Placeholder images
 import imageMeasure from '../images/placeholder_measure.jpeg'
-import imagePlane from '../images/placeholder_planer.jpeg';
+import imagePlane from '../images/placeholder_planer.jpeg'
 
 // Work images
 import workBedframe from '../images/work/work_bedframe.jpg'
@@ -18,8 +18,8 @@ import workFence2 from '../images/work/work_fence2.jpg'
 import workGate from '../images/work/work_gate.jpg'
 import workRailing from '../images/work/work_railing.jpg'
 import workStable1 from '../images/work/work_stable1.jpg'
-import workStable2 from '../images/work/work_stable2.jpg'
 import workVanity from '../images/work/work_vanity.jpg'
+import workChair from '../images/work/work_chairs1.jpg'
 
 class Main extends Component {
   render() {
@@ -47,101 +47,114 @@ class Main extends Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img src={imagePlane} alt="Scott's tools for woodworking projects" />
+            <img
+              src={imagePlane}
+              alt="Scott's tools for woodworking projects"
+            />
           </span>
           <p>
-            **TODO** - Basic Intro, Services offered -Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+            SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC <br />
+            730 Seattle St <br />
+            Okanogan, WA 98840 <br />
+          </p>
+          <p>General Contractor - ID: SCOTTCS814BJ</p>
+          <p>
+            SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC provides residential
+            remodeling, maintenance and repair services, plus custom
+            woodworking.
           </p>
           <p>
-          **TODO** - Intro continued - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            Some of our services offered:
+            <ul>
+              <li>Construction and repair of decks</li>
+              <li>Construction and repair of fences</li>
+              <li>Construction of garages and outbuildings </li>
+              <li>Window and /or door replacement</li>
+              <li>Cabinet installation</li>
+              <li>Flooring installation</li>
+              <li>Installation of handrails</li>
+              <li>Siding installation</li>
+              <li>Baseboard, window and door casing installation</li>
+              <li>Drywall repair</li>
+              <li>Insulation installation</li>
+              <li>Gutter installation</li>
+              <li>Screen repair</li>
+              <li>Interior and exterior painting</li>
+              <li>Construction of custom cabinets, furniture, shelving</li>
+            </ul>
           </p>
+          <p>Small jobs welcomed!</p>
           {close}
         </article>
 
         <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          id="projects"
+          className={`${this.props.article === 'projects' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
-          
-          <p>
-            **TODO - INTRO SUMMARY OF WORK**Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. 
-          </p>
-          <figure className="image main">
-            <img src={workBedframe} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
-          </figure>
+          <h2 className="major">Projects</h2>
+
+          <p>Small jobs welcome!</p>
+
           <figure className="image main">
             <img src={workCabinets} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workChest} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workCoffeeTable} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Cabinet installation</figcaption>
           </figure>
           <figure className="image main">
             <img src={workDeck1} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Small deck and railing</figcaption>
           </figure>
           <figure className="image main">
             <img src={workDeck2} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Large deck with pergola</figcaption>
           </figure>
           <figure className="image main">
             <img src={workDeck3} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Small deck and railing</figcaption>
           </figure>
           <figure className="image main">
             <img src={workFence1} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>6 foot cedar fence</figcaption>
           </figure>
           <figure className="image main">
             <img src={workFence2} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>PVC fence installation</figcaption>
           </figure>
           <figure className="image main">
             <img src={workGate} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Custom built 6 foot gate</figcaption>
           </figure>
           <figure className="image main">
             <img src={workRailing} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Stair railing installation</figcaption>
           </figure>
           <figure className="image main">
             <img src={workStable1} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workStable2} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>12' X 24' stable</figcaption>
           </figure>
           <figure className="image main">
             <img src={workVanity} alt="" />
-            <figcaption>**TODO**Information about project</figcaption>
+            <figcaption>Custom built bathroom vanity</figcaption>
           </figure>
-          
+          <figure className="image main">
+            <img src={workBedframe} alt="" />
+            <figcaption>Custom built barn board bed frame</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workChest} alt="" />
+            <figcaption>Custom built blanket chest</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workCoffeeTable} alt="" />
+            <figcaption>Custom built barn board coffee table</figcaption>
+          </figure>
+          <figure className="image main">
+            <img src={workChair} alt="" />
+            <figcaption>Lawn chairs</figcaption>
+          </figure>
+
           {close}
         </article>
 
@@ -157,14 +170,12 @@ class Main extends Component {
             <img src={imageMeasure} alt="Scott measuring a new project" />
           </span>
           <p>
-          **TODO** - About your experience, etc. - Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+            Scott's Contracting & Handyman Service LLC is committed to helping
+            north central Washington residents maintain and improve their
+            properties. Let Scott's take on those projects that you have been
+            meaning to get to for years.
           </p>
+          <p>**TODO**Include past work experience...</p>
           {close}
         </article>
 
