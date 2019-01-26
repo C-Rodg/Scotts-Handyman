@@ -52,17 +52,14 @@ class Main extends Component {
               alt="Scott's tools for woodworking projects"
             />
           </span>
-          <p>
-            SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC <br />
-            730 Seattle St <br />
-            Okanogan, WA 98840 <br />
-          </p>
+          <p>SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC</p>
           <p>General Contractor - ID: SCOTTCS814BJ</p>
           <p>
             SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC provides residential
             remodeling, maintenance and repair services, plus custom
             woodworking.
           </p>
+          <p>Small jobs welcomed!</p>
           <p>
             Some of our services offered:
             <ul>
@@ -83,7 +80,7 @@ class Main extends Component {
               <li>Construction of custom cabinets, furniture, shelving</li>
             </ul>
           </p>
-          <p>Small jobs welcomed!</p>
+
           {close}
         </article>
 
@@ -175,7 +172,13 @@ class Main extends Component {
             properties. Let Scott's take on those projects that you have been
             meaning to get to for years.
           </p>
-          <p>**TODO**Include past work experience...</p>
+          <p>
+            SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC <br />
+            730 Seattle St <br />
+            Okanogan, WA 98840 <br />
+            General Contractor - ID: SCOTTCS814BJ <br />
+            <a href="tel:1-509-422-6430">1-509-422-6430</a>
+          </p>
           {close}
         </article>
 
