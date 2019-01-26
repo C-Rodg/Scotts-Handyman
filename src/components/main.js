@@ -177,7 +177,7 @@ class Main extends Component {
             730 Seattle St <br />
             Okanogan, WA 98840 <br />
             General Contractor - ID: SCOTTCS814BJ <br />
-            <a href="tel:1-509-422-6430">1-509-422-6430</a>
+            <a href="tel:1-509-557-8863">1-509-557-8863</a>
           </p>
           {close}
         </article>
