@@ -223,7 +223,7 @@ class Main extends Component {
           <ul className="icons">
             <li>
               <a
-                href="mailto:test@gmail.com"
+                href="mailto:scottscontractinghandyman@gmail.com"
                 className="icon fa-envelope"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -231,7 +231,7 @@ class Main extends Component {
                 <span className="label">Mail</span>
               </a>
             </li>
-            <li>
+            <li style={{ display: 'none' }}>
               <a
                 href="https://facebook.com"
                 className="icon fa-facebook"
@@ -241,7 +241,7 @@ class Main extends Component {
                 <span className="label">Facebook</span>
               </a>
             </li>
-            <li>
+            <li style={{ display: 'none' }}>
               <a
                 href="https://instagram.com"
                 className="icon fa-instagram"
@@ -251,7 +251,7 @@ class Main extends Component {
                 <span className="label">Instagram</span>
               </a>
             </li>
-            <li>
+            <li style={{ display: 'none' }}>
               <a
                 href="https://yelp.com"
                 className="icon fa-yelp"
