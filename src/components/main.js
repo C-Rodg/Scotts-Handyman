@@ -60,26 +60,24 @@ class Main extends Component {
             woodworking.
           </p>
           <p>Small jobs welcomed!</p>
-          <p>
-            Some of our services offered:
-            <ul>
-              <li>Construction and repair of decks</li>
-              <li>Construction and repair of fences</li>
-              <li>Construction of garages and outbuildings </li>
-              <li>Window and /or door replacement</li>
-              <li>Cabinet installation</li>
-              <li>Flooring installation</li>
-              <li>Installation of handrails</li>
-              <li>Siding installation</li>
-              <li>Baseboard, window and door casing installation</li>
-              <li>Drywall repair</li>
-              <li>Insulation installation</li>
-              <li>Gutter installation</li>
-              <li>Screen repair</li>
-              <li>Interior and exterior painting</li>
-              <li>Construction of custom cabinets, furniture, shelving</li>
-            </ul>
-          </p>
+          <p style={{ marginBottom: '10px' }}>Some of our services offered:</p>
+          <ul>
+            <li>Construction and repair of decks</li>
+            <li>Construction and repair of fences</li>
+            <li>Construction of garages and outbuildings </li>
+            <li>Window and /or door replacement</li>
+            <li>Cabinet installation</li>
+            <li>Flooring installation</li>
+            <li>Installation of handrails</li>
+            <li>Siding installation</li>
+            <li>Baseboard, window and door casing installation</li>
+            <li>Drywall repair</li>
+            <li>Insulation installation</li>
+            <li>Gutter installation</li>
+            <li>Screen repair</li>
+            <li>Interior and exterior painting</li>
+            <li>Construction of custom cabinets, furniture, shelving</li>
+          </ul>
 
           {close}
         </article>

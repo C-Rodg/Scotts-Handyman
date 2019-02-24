@@ -25,7 +25,7 @@ class IndexPage extends Component {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' })
     }, 100)
-    document.addEventListener('mousedown', this.handleClickOutside)
+    document.addEventListener('mousedown', this.handleClickOutside, false)
   }
 
   componentWillUnmount() {
@@ -82,7 +82,11 @@ class IndexPage extends Component {
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
-        this.handleCloseArticle()
+        const isScrollClick =
+          window.innerWidth - event.clientX < 35 ? true : false
+        if (!isScrollClick) {
+          this.handleCloseArticle()
+        }
       }
     }
   }
