@@ -94,59 +94,62 @@ class Main extends Component {
           <p>Small jobs welcome!</p>
 
           <figure className="image main">
-            <img src={workCabinets} alt="" />
+            <img src={workCabinets} alt="Cabinet installation" />
             <figcaption>Cabinet installation</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workDeck1} alt="" />
+            <img src={workDeck1} alt="Small deck and railing" />
             <figcaption>Small deck and railing</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workDeck2} alt="" />
+            <img src={workDeck2} alt="Large deck with pergola" />
             <figcaption>Large deck with pergola</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workDeck3} alt="" />
+            <img src={workDeck3} alt="Small deck and railing" />
             <figcaption>Small deck and railing</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workFence1} alt="" />
+            <img src={workFence1} alt="6 foot cedar fence" />
             <figcaption>6 foot cedar fence</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workFence2} alt="" />
+            <img src={workFence2} alt="PVC fence installation" />
             <figcaption>PVC fence installation</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workGate} alt="" />
+            <img src={workGate} alt="Custom built 6 foot gate" />
             <figcaption>Custom built 6 foot gate</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workRailing} alt="" />
+            <img src={workRailing} alt="Stair railing installation" />
             <figcaption>Stair railing installation</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workStable1} alt="" />
+            <img src={workStable1} alt="Wood stable" />
             <figcaption>12' X 24' stable</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workVanity} alt="" />
+            <img src={workVanity} alt="Custom built bathroom vanity" />
             <figcaption>Custom built bathroom vanity</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workBedframe} alt="" />
+            <img src={workBedframe} alt="Custom built barn board bed frame" />
             <figcaption>Custom built barn board bed frame</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workChest} alt="" />
+            <img src={workChest} alt="Custom built blanket chest" />
             <figcaption>Custom built blanket chest</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workCoffeeTable} alt="" />
+            <img
+              src={workCoffeeTable}
+              alt="Custom built barn board coffee table"
+            />
             <figcaption>Custom built barn board coffee table</figcaption>
           </figure>
           <figure className="image main">
-            <img src={workChair} alt="" />
+            <img src={workChair} alt="Wood lawn chairs" />
             <figcaption>Lawn chairs</figcaption>
           </figure>
 
