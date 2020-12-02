@@ -7,8 +7,8 @@ collections:
   - name: 'pages' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages' # Used in the UI
     files:
-      - label: 'Projects Gallery'
-        name: 'projectsGallery'
+      - label: 'Project Gallery'
+        name: 'projectGallery'
         file: 'content/projects.md'
         fields:
           - { label: Title, name: title, widget: string }
