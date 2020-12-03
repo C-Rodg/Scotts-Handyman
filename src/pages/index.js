@@ -135,33 +135,33 @@ const TitleMapping = {
 
 export default IndexPage
 
-export const projectQuery = graphql`
-  query {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { eq: "projects" }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              projects {
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                caption
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const projectQuery = graphql`
+//   query {
+//     allFile(
+//       filter: {
+//         sourceInstanceName: { eq: "content" }
+//         name: { eq: "projects" }
+//       }
+//     ) {
+//       edges {
+//         node {
+//           childMarkdownRemark {
+//             frontmatter {
+//               title
+//               projects {
+//                 image {
+//                   childImageSharp {
+//                     fluid(maxWidth: 2048, quality: 100) {
+//                       ...GatsbyImageSharpFluid
+//                     }
+//                   }
+//                 }
+//                 caption
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
