@@ -93,9 +93,9 @@ class IndexPage extends Component {
   }
 
   render() {
-    // TODO:
-    const projectData = {} //this.props.data.allFile.edges[0].node
-    //.childMarkdownRemark.frontmatter
+    const uploadedContent = this.props.data.allFile.edges[0].node
+      .childMarkdownRemark.frontmatter
+
     return (
       <Layout location={this.props.location} title={this.state.currentTitle}>
         <div
@@ -115,7 +115,7 @@ class IndexPage extends Component {
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
-              projectData={projectData}
+              uploadedContent={uploadedContent}
             />
             <Footer timeout={this.state.timeout} />
           </div>
@@ -136,33 +136,28 @@ const TitleMapping = {
 
 export default IndexPage
 
-// export const projectQuery = graphql`
-//   query {
-//     allFile(
-//       filter: {
-//         sourceInstanceName: { eq: "content" }
-////         name: { eq: "projects" }
-//       }
-//     ) {
-//       edges {
-//         node {
-//           childMarkdownRemark {
-//             frontmatter {
-//               title
-//               projects {
-//                 image {
-//                   childImageSharp {
-//                     fluid(maxWidth: 2048, quality: 100) {
-//                       ...GatsbyImageSharpFluid
-//                     }
-//                   }
-//                 }
-//                 caption
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const mainQuery = graphql`
+  query {
+    allFile(filter: { sourceInstanceName: { eq: "content" } }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              projects_title
+              projects {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                caption
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

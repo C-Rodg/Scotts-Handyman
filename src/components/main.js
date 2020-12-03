@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
 // Placeholder images
 import imageMeasure from '../images/placeholder_measure.jpeg'
@@ -7,7 +8,7 @@ import imagePlane from '../images/placeholder_planer.jpeg'
 
 class Main extends Component {
   render() {
-    const { projectData } = this.props
+    const { uploadedContent } = this.props
     let close = (
       <div
         aria-label="Close"
@@ -80,13 +81,15 @@ class Main extends Component {
         >
           <h2 className="major">Projects</h2>
 
-          <p>{projectData.title}</p>
-          {projectData.projects && projectData.projects.length > 0 ? (
-            projectData.projects.map(project => {
-              console.log(project)
+          <p>{uploadedContent.projects_title}</p>
+          {uploadedContent.projects && uploadedContent.projects.length > 0 ? (
+            uploadedContent.projects.map(project => {
               return (
                 <figure className="image main">
-                  <img src={project.image} alt={project.caption} />
+                  <Img
+                    fluid={project.image.childImageSharp.fluid}
+                    alt={project.caption}
+                  />
                   <figcaption>{project.caption}</figcaption>
                 </figure>
               )

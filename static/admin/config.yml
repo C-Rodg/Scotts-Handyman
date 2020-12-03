@@ -13,7 +13,7 @@ collections:
         name: 'project_gallery'
         file: 'content/project_gallery.md'
         fields:
-          - { label: Title, name: title, widget: string }
+          - { label: Title, name: projects_title, widget: string }
           - {
               label: Projects,
               name: projects,
