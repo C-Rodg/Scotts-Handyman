@@ -23,11 +23,16 @@ import workChair from '../images/work/work_chairs1.jpg'
 
 class Main extends Component {
   render() {
+    const { projectData } = this.props
     let close = (
       <div
+        aria-label="Close"
+        role="button"
         className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
+        tabIndex="0"
+        onClick={this.props.onCloseArticle}
+        onKeyDown={ev => {
+          ev.keyCode === 13 && this.props.onCloseArticle()
         }}
       />
     )
@@ -91,7 +96,19 @@ class Main extends Component {
         >
           <h2 className="major">Projects</h2>
 
-          <p>Small jobs welcome!</p>
+          <p>{projectData.title}</p>
+          {projectData.projects && projectData.projects.length > 0 ? (
+            projectData.projects.map(project => {
+              return (
+                <figure className="image main">
+                  <img src={project.image} alt={project.caption} />
+                  <figcaption>{project.caption}</figcaption>
+                </figure>
+              )
+            })
+          ) : (
+            <div>No projects loaded...</div>
+          )}
 
           <figure className="image main">
             <img src={workCabinets} alt="Cabinet installation" />

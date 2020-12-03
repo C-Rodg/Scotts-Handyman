@@ -93,7 +93,8 @@ class IndexPage extends Component {
   }
 
   render() {
-    console.log(this.props.data)
+    const projectData = this.props.data.allFile.edges[0].node
+      .childMarkdownRemark.frontmatter
     return (
       <Layout location={this.props.location} title={this.state.currentTitle}>
         <div
@@ -113,6 +114,7 @@ class IndexPage extends Component {
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
+              projectData={projectData}
             />
             <Footer timeout={this.state.timeout} />
           </div>
