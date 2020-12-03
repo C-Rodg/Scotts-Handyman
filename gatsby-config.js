@@ -5,20 +5,13 @@ module.exports = {
     author: `@C-Rodg`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
-        path: `${__dirname}/static/uploads`,
+        path: `${__dirname}/static/img`,
       },
     },
     {
@@ -28,9 +21,41 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 2048,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -43,9 +68,5 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }

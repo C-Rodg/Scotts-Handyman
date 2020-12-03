@@ -5,22 +5,6 @@ import PropTypes from 'prop-types'
 import imageMeasure from '../images/placeholder_measure.jpeg'
 import imagePlane from '../images/placeholder_planer.jpeg'
 
-// Work images
-import workBedframe from '../images/work/work_bedframe.jpg'
-import workCabinets from '../images/work/work_cabinets.jpg'
-import workChest from '../images/work/work_chest.jpg'
-import workCoffeeTable from '../images/work/work_coffeetable.jpg'
-import workDeck1 from '../images/work/work_deck1.jpg'
-import workDeck2 from '../images/work/work_deck2.jpg'
-import workDeck3 from '../images/work/work_deck3.jpg'
-import workFence1 from '../images/work/work_fence1.jpg'
-import workFence2 from '../images/work/work_fence2.jpg'
-import workGate from '../images/work/work_gate.jpg'
-import workRailing from '../images/work/work_railing.jpg'
-import workStable1 from '../images/work/work_stable1.jpg'
-import workVanity from '../images/work/work_vanity.jpg'
-import workChair from '../images/work/work_chairs1.jpg'
-
 class Main extends Component {
   render() {
     const { projectData } = this.props
@@ -99,6 +83,7 @@ class Main extends Component {
           <p>{projectData.title}</p>
           {projectData.projects && projectData.projects.length > 0 ? (
             projectData.projects.map(project => {
+              console.log(project)
               return (
                 <figure className="image main">
                   <img src={project.image} alt={project.caption} />
@@ -109,66 +94,6 @@ class Main extends Component {
           ) : (
             <div>No projects loaded...</div>
           )}
-
-          <figure className="image main">
-            <img src={workCabinets} alt="Cabinet installation" />
-            <figcaption>Cabinet installation</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workDeck1} alt="Small deck and railing" />
-            <figcaption>Small deck and railing</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workDeck2} alt="Large deck with pergola" />
-            <figcaption>Large deck with pergola</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workDeck3} alt="Small deck and railing" />
-            <figcaption>Small deck and railing</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workFence1} alt="6 foot cedar fence" />
-            <figcaption>6 foot cedar fence</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workFence2} alt="PVC fence installation" />
-            <figcaption>PVC fence installation</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workGate} alt="Custom built 6 foot gate" />
-            <figcaption>Custom built 6 foot gate</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workRailing} alt="Stair railing installation" />
-            <figcaption>Stair railing installation</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workStable1} alt="Wood stable" />
-            <figcaption>12' X 24' stable</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workVanity} alt="Custom built bathroom vanity" />
-            <figcaption>Custom built bathroom vanity</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workBedframe} alt="Custom built barn board bed frame" />
-            <figcaption>Custom built barn board bed frame</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workChest} alt="Custom built blanket chest" />
-            <figcaption>Custom built blanket chest</figcaption>
-          </figure>
-          <figure className="image main">
-            <img
-              src={workCoffeeTable}
-              alt="Custom built barn board coffee table"
-            />
-            <figcaption>Custom built barn board coffee table</figcaption>
-          </figure>
-          <figure className="image main">
-            <img src={workChair} alt="Wood lawn chairs" />
-            <figcaption>Lawn chairs</figcaption>
-          </figure>
 
           {close}
         </article>

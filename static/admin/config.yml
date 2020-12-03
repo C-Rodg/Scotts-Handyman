@@ -1,14 +1,16 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'static/uploads'
+
+media_folder: 'static/img/uploads'
+public_folder: /img/uploads
 
 collections:
   - name: 'pages' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages' # Used in the UI
     files:
       - label: 'Project Gallery'
-        name: 'projectGallery'
+        name: 'projects'
         file: 'content/projects.md'
         fields:
           - { label: Title, name: title, widget: string }
