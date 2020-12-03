@@ -93,8 +93,9 @@ class IndexPage extends Component {
   }
 
   render() {
-    const projectData = this.props.data.allFile.edges[0].node
-      .childMarkdownRemark.frontmatter
+    // TODO:
+    const projectData = {} //this.props.data.allFile.edges[0].node
+    //.childMarkdownRemark.frontmatter
     return (
       <Layout location={this.props.location} title={this.state.currentTitle}>
         <div

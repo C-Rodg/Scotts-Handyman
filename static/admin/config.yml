@@ -10,8 +10,8 @@ collections:
     label: 'Pages' # Used in the UI
     files:
       - label: 'Project Gallery'
-        name: 'projects'
-        file: 'content/projects.md'
+        name: 'project_gallery'
+        file: 'content/project_gallery.md'
         fields:
           - { label: Title, name: title, widget: string }
           - {
