@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -92,6 +93,7 @@ class IndexPage extends Component {
   }
 
   render() {
+    console.log(this.props.data)
     return (
       <Layout location={this.props.location} title={this.state.currentTitle}>
         <div
@@ -130,3 +132,28 @@ const TitleMapping = {
 }
 
 export default IndexPage
+
+export const projectQuery = graphql`
+  query {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        name: { eq: "projects" }
+      }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              projects {
+                image
+                caption
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
