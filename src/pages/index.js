@@ -141,7 +141,7 @@ export default IndexPage
 //     allFile(
 //       filter: {
 //         sourceInstanceName: { eq: "content" }
-//         name: { eq: "projects" }
+////         name: { eq: "projects" }
 //       }
 //     ) {
 //       edges {
