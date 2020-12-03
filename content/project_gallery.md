@@ -25,8 +25,8 @@ projects:
     image: /img/uploads/work_bedframe.jpg
   - caption: Custom built blanket chest
     image: /img/uploads/work_chest.jpg
-  - caption: Custom built barn board coffee table
-    image: /img/uploads/work_coffeetable.jpg
   - caption: Lawn chairs
     image: /img/uploads/work_chairs1.jpg
+  - caption: Custom built barn board coffee table
+    image: /img/uploads/work_coffeetable.jpg
 ---
