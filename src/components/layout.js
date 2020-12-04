@@ -15,7 +15,6 @@ const Layout = ({
   title,
 }) => {
   let content
-
   if (location && location.pathname === '/') {
     content = <div>{children}</div>
   } else {
@@ -38,7 +37,9 @@ const Layout = ({
             <Helmet
               htmlAttributes={{ lang }}
               title={title}
-              titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+              titleTemplate={`%s | ${
+                data.site.siteMetadata.title
+              } | Woodworking`}
               meta={[
                 {
                   name: `description`,
@@ -91,7 +92,19 @@ const Layout = ({
 Layout.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: [],
+  keywords: [
+    'woodworking',
+    'repair',
+    'carpentry',
+    'okanogan',
+    'washington',
+    'fix',
+    'home repair',
+    'remodel',
+    'contracting',
+    'installation',
+    'handyman',
+  ],
 }
 
 Layout.propTypes = {
