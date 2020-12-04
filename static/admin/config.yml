@@ -9,11 +9,31 @@ collections:
   - name: 'pages' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages' # Used in the UI
     files:
+      - label: 'Intro'
+        name: 'intro'
+        file: 'content/intro.md'
+        fields:
+          - { label: Intro Header Image, name: intro_image, widget: image }
+          - { label: Intro Paragraph 1, name: intro_title, widget: string }
+          - { label: Intro Paragraph 2, name: intro_subtitle, widget: string }
+          - { label: Intro List Title, name: intro_list_title, widget: string }
+          - {
+              label: Intro List Items,
+              name: intro_list_items,
+              widget: list,
+              fields: [{ label: List Item Text, name: item, widget: text }]
+          }
+      - label: 'About'
+        name: 'about'
+        file: 'content/about.md'
+        fields:
+          - { label: About Header Image, name: about_image, widget: image }
+          - { label: About Paragraph, name: about_title, widget: string }
       - label: 'Project Gallery'
         name: 'project_gallery'
         file: 'content/project_gallery.md'
         fields:
-          - { label: Title, name: projects_title, widget: string }
+          - { label: Projects Title, name: projects_title, widget: string }
           - {
               label: Projects,
               name: projects,
