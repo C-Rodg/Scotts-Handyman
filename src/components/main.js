@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-// Placeholder images
-import imageMeasure from '../images/placeholder_measure.jpeg'
-import imagePlane from '../images/placeholder_planer.jpeg'
-
 class Main extends Component {
   render() {
-    const { uploadedContent } = this.props
+    const {
+      uploadedContent: { Intro, About, Projects },
+    } = this.props
+    const projectsData = Projects.edges[0].node.childMarkdownRemark.frontmatter
+    const introData = Intro.edges[0].node.childMarkdownRemark.frontmatter
+    const aboutData = About.edges[0].node.childMarkdownRemark.frontmatter
+
     let close = (
       <div
         aria-label="Close"
@@ -37,36 +39,22 @@ class Main extends Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img
-              src={imagePlane}
+            <Img
+              fluid={introData.intro_image.childImageSharp.fluid}
               alt="Scott's tools for woodworking projects"
             />
           </span>
           <p>SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC</p>
           <p>General Contractor - ID: SCOTTCS814BJ</p>
-          <p>
-            SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC provides residential
-            remodeling, maintenance and repair services, plus custom
-            woodworking.
-          </p>
-          <p>Small jobs welcomed!</p>
-          <p style={{ marginBottom: '10px' }}>Some of our services offered:</p>
+          <p>{introData.intro_title}</p>
+          <p>{introData.intro_subtitle}</p>
+          <p style={{ marginBottom: '10px' }}>{introData.intro_list_title}</p>
           <ul>
-            <li>Construction and repair of decks</li>
-            <li>Construction and repair of fences</li>
-            <li>Construction of garages and outbuildings </li>
-            <li>Window and /or door replacement</li>
-            <li>Cabinet installation</li>
-            <li>Flooring installation</li>
-            <li>Installation of handrails</li>
-            <li>Siding installation</li>
-            <li>Baseboard, window and door casing installation</li>
-            <li>Drywall repair</li>
-            <li>Insulation installation</li>
-            <li>Gutter installation</li>
-            <li>Screen repair</li>
-            <li>Interior and exterior painting</li>
-            <li>Construction of custom cabinets, furniture, shelving</li>
+            {introData.intro_list_items && introData.intro_list_items.length > 0
+              ? introData.intro_list_items.map((listItem, idx) => {
+                  return <li key={idx}>{listItem.item}</li>
+                })
+              : null}
           </ul>
 
           {close}
@@ -81,11 +69,11 @@ class Main extends Component {
         >
           <h2 className="major">Projects</h2>
 
-          <p>{uploadedContent.projects_title}</p>
-          {uploadedContent.projects && uploadedContent.projects.length > 0 ? (
-            uploadedContent.projects.map(project => {
+          <p>{projectsData.projects_title}</p>
+          {projectsData.projects && projectsData.projects.length > 0 ? (
+            projectsData.projects.map((project, idx) => {
               return (
-                <figure className="image main">
+                <figure className="image main" key={idx}>
                   <Img
                     fluid={project.image.childImageSharp.fluid}
                     alt={project.caption}
@@ -110,14 +98,12 @@ class Main extends Component {
         >
           <h2 className="major">About</h2>
           <span className="image main">
-            <img src={imageMeasure} alt="Scott measuring a new project" />
+            <Img
+              fluid={aboutData.about_image.childImageSharp.fluid}
+              alt="Scott measuring a new project"
+            />
           </span>
-          <p>
-            Scott's Contracting & Handyman Service LLC is committed to helping
-            north central Washington residents maintain and improve their
-            properties. Let Scott take on those projects that you have been
-            meaning to get to for years.
-          </p>
+          <p>{aboutData.about_title}</p>
           <p>
             SCOTT'S CONTRACTING & HANDYMAN SERVICE LLC <br />
             730 Seattle St <br />

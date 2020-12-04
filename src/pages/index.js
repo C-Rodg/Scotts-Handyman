@@ -93,9 +93,6 @@ class IndexPage extends Component {
   }
 
   render() {
-    const uploadedContent = this.props.data.allFile.edges[0].node
-      .childMarkdownRemark.frontmatter
-
     return (
       <Layout location={this.props.location} title={this.state.currentTitle}>
         <div
@@ -115,7 +112,7 @@ class IndexPage extends Component {
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
-              uploadedContent={uploadedContent}
+              uploadedContent={this.props.data}
             />
             <Footer timeout={this.state.timeout} />
           </div>
@@ -137,8 +134,10 @@ const TitleMapping = {
 export default IndexPage
 
 export const mainQuery = graphql`
-  query {
-    allFile(filter: { sourceInstanceName: { eq: "content" } }) {
+  query MainQuery {
+    Projects: allFile(
+      filter: { absolutePath: { regex: "/project_gallery.md$/" } }
+    ) {
       edges {
         node {
           childMarkdownRemark {
@@ -153,6 +152,47 @@ export const mainQuery = graphql`
                   }
                 }
                 caption
+              }
+            }
+          }
+        }
+      }
+    }
+    About: allFile(filter: { absolutePath: { regex: "/about.md$/" } }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              about_title
+              about_image {
+                childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    Intro: allFile(filter: { absolutePath: { regex: "/intro.md$/" } }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              intro_title
+              intro_subtitle
+              intro_list_title
+              intro_list_items {
+                item
+              }
+              intro_image {
+                childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
