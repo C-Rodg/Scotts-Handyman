@@ -115,7 +115,7 @@ class Main extends Component {
           <p>
             Scott's Contracting & Handyman Service LLC is committed to helping
             north central Washington residents maintain and improve their
-            properties. Let Scott's take on those projects that you have been
+            properties. Let Scott take on those projects that you have been
             meaning to get to for years.
           </p>
           <p>
